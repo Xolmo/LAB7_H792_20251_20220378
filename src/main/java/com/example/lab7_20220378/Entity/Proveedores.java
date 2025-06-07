@@ -30,13 +30,13 @@ public class Proveedores {
     @Size(max = 100, message = "El nombre comercial solo puede tener 100 caracteres")
     private String nombreComercial;
     @Digits(integer = 11, fraction = 0)
-    private Integer ruc;
+    private Long ruc;
     @Digits(integer = 9, fraction = 0)
     private Integer telefono;
     @Column(name = "correo_electronico")
     @NotBlank
     @Email(message = "Debe ingresar un correo válido")
-    private String corrroElectronico;
+    private String correoElectronico;
     @Column(name = "sitio_web")
     @NotBlank
     @URL(message = "Debe ingresar una URL válida")
