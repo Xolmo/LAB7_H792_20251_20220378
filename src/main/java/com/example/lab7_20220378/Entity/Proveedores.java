@@ -1,5 +1,6 @@
 package com.example.lab7_20220378.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.Email;
@@ -15,6 +16,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Table(name = "proveedores")
+@JsonIgnoreProperties({"sitioWeb", "direccionFisica", "facturacionAnualDolar", "fechaDeRegistro", "ultimaActualizacion"})
 public class Proveedores {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
